@@ -1,7 +1,9 @@
 const Meetup = require('./Meetup');
+const PrimaryObject = require('./PrimaryObject');
 
-export class Instructor extends PrimaryObject {
+class Instructor extends PrimaryObject {
     constructor(args) {
+        super(args);
         this._name = args.name;
     }
 
@@ -11,22 +13,13 @@ export class Instructor extends PrimaryObject {
     set name(val) {
         this._name = val;
     }
-    get rank() {
-        return this._name;
-    }
-    set rank(val) {
-        this._name = val;
-    }
     get slots() {
         return this._slots;
     }
     set slots(val) {
         this._slots = val;
     }
-    get slots() {
-        return this._slots;
-    }
-    set slots(val) {
-        this._slots = val;
-    }
+    
 }
+
+module.exports = Instructor;
