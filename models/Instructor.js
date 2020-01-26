@@ -1,6 +1,6 @@
 const Meetup = require('./Meetup');
 
-export class Instructor {
+export class Instructor extends PrimaryObject {
     constructor(args) {
         this._name = args.name;
     }

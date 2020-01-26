@@ -11,6 +11,9 @@ class Meetup {
             Panel: 'Panel'
         }
     } 
+
+    // timeslots
+    // instructor
 }
 
 export default Meetup;
