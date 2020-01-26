@@ -1,7 +1,7 @@
 const Meetup = require('./Meetup');
-const PrimaryObject = require('./PrimaryObject');
+const PrimaryObject = require('./PrimaryObject').default;
 
-export class Instructor extends PrimaryObject {
+class Instructor extends PrimaryObject {
     constructor(args) {
         super(args);
         this._name = args.name;
@@ -27,3 +27,5 @@ export class Instructor extends PrimaryObject {
     }
     
 }
+
+module.exports = Instructor;

@@ -1,4 +1,4 @@
-const PrimaryObject = require('./PrimaryObject');
+const PrimaryObject = require('./PrimaryObject').default;
 
 class Meetup extends PrimaryObject {
     constructor(args) {
@@ -24,4 +24,4 @@ class Meetup extends PrimaryObject {
     // instructor
 }
 
-export default Meetup;
+module.exports = Meetup;

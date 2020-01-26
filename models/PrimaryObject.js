@@ -1,6 +1,6 @@
 class PrimaryObject {
     constructor(args) {
-        this._ranking = args._ranking;
+        this._ranking = args.ranking;
         this._guid = this.generateGuid();
     }
 
@@ -44,4 +44,4 @@ class PrimaryObject {
     }
 }
 
-export default PrimaryObject;
+module.exports = PrimaryObject;
