@@ -5,8 +5,7 @@ class Timeslot extends PrimaryObject{
         super(args);
         this._time = args.time;
     }
-    // time
-
+    
     get time(){
         return this._time;
     }

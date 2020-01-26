@@ -1,5 +1,6 @@
 const Meetup = require('./Meetup');
 const PrimaryObject = require('./PrimaryObject');
+const data = require('./data/instructors.json');
 
 class Instructor extends PrimaryObject {
     constructor(args) {
@@ -19,7 +20,9 @@ class Instructor extends PrimaryObject {
     set slots(val) {
         this._slots = val;
     }
-    
+    static get mocks() {
+        return data.map(item => new Instructor(item));
+    }
 }
 
 module.exports = Instructor;
