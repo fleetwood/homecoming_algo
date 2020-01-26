@@ -3,16 +3,16 @@ const PrimaryObject = require('./PrimaryObject');
 class Meetup extends PrimaryObject {
     constructor(args) {
         super(args);
-        this._timeslots = args.timeslots || [];
+        this._timeslot = args.timeslot;
         this._instructor = args.instructor;
     }
 
-    get timeslots() {
-        return this._timeslots;
+    get timeslot() {
+        return this._timeslot;
     }
 
-    set timeslots(val){
-        this._timeslots = val;
+    set timeslot(val){
+        this._timeslot = val;
     }
 
     static get Types() {
@@ -24,12 +24,12 @@ class Meetup extends PrimaryObject {
         }
     } 
 
-    get instructors(){
-        return this._instructors;
+    get instructor(){
+        return this._instructor;
     }
 
-    set instructors(val){
-        this._instructors = val;
+    set instructor(val){
+        this._instructor = val;
     }
 }
 
