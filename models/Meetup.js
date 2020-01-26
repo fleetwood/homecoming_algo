@@ -1,6 +1,9 @@
 class Meetup {
-    constructor() {
-
+    constructor(args) {
+        super()
+        this._timeslots = args.timeslots;
+        this._instructor = args.instructor;
+        this.
     }
 
     static get Types() {
@@ -11,6 +14,7 @@ class Meetup {
             Panel: 'Panel'
         }
     } 
+
 
     // timeslots
     // instructor

@@ -3,13 +3,13 @@ import PrimaryObject from './PrimaryObject';
 class Student extends PrimaryObject {
   constructor(args){
     super()
-    this.name = arg.name;
-    this.meetups = arg.meetups;
-    this.preferences = arg.preferences;
+    this._name = arg.name;
+    this._meetups = arg.meetups;
+    this._preferences = arg.preferences;
   }
     // name
     get name(){
-      return this.name;
+      return this._name;
     }
 
     set name(val){
@@ -17,7 +17,7 @@ class Student extends PrimaryObject {
     }
     // meetups
     get meetups(){
-      return this.meetups;
+      return this._meetups;
     }
 
     set meetups(val){
@@ -25,7 +25,7 @@ class Student extends PrimaryObject {
     }
     // preferences
     get preferences(){
-      return this.preferences;
+      return this._preferences;
     }
 
     set preferences(val){
