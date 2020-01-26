@@ -1,4 +1,4 @@
-import PrimaryObject from './PrimaryObject';
+const PrimaryObject = require('./PrimaryObject');
 
 class Student extends PrimaryObject {
   constructor(args){

@@ -1,9 +1,9 @@
 const Meetup = require('./Meetup');
-import PrimaryObject from './PrimaryObject';
+const PrimaryObject = require('./PrimaryObject');
 
 export class Instructor extends PrimaryObject {
     constructor(args) {
-        super()
+        super(args);
         this._name = args.name;
     }
 
@@ -25,10 +25,5 @@ export class Instructor extends PrimaryObject {
     set slots(val) {
         this._slots = val;
     }
-    get slots() {
-        return this._slots;
-    }
-    set slots(val) {
-        this._slots = val;
-    }
+    
 }
