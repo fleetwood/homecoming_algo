@@ -15,3 +15,5 @@ export class Timeslot extends PrimaryObject{
         this._time = val;
     }
 }
+
+module.exports = Timeslot;

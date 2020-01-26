@@ -1,4 +1,4 @@
-const PrimaryObject = require('./PrimaryObject').default;
+const PrimaryObject = require('./PrimaryObject');
 
 class Meetup extends PrimaryObject {
     constructor(args) {

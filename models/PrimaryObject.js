@@ -27,7 +27,7 @@ class PrimaryObject {
             };
         return vals.map(r =>
             isNaN(r)
-                ? r.split('').map(rm => alpha[random(0, alpha.length)]).join('')
+                ? r.split('').map(rm => alpha[this.random(0, alpha.length)]).join('')
                 : pad(this.random(0, r), r.toString().length)
         ).join(sep);
     };

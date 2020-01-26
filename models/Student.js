@@ -1,11 +1,11 @@
 const PrimaryObject = require('./PrimaryObject');
 
-export class Student extends PrimaryObject {
+class Student extends PrimaryObject {
   constructor(args){
     super(args);
-    this._name = arg.name;
-    this._meetups = arg.meetups;
-    this._preferences = arg.preferences;
+    this._name = args.name;
+    this._meetups = args.meetups;
+    this._preferences = args.preferences;
   }
     // name
     get name(){
