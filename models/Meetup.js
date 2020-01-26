@@ -11,6 +11,10 @@ class Meetup extends PrimaryObject {
         return this._timeslots;
     }
 
+    set timeslots(val){
+        this._timeslots = val;
+    }
+
     static get Types() {
         return {
             Bike: 'Bike',
@@ -20,8 +24,13 @@ class Meetup extends PrimaryObject {
         }
     } 
 
-    // timeslots
-    // instructor
+    get instructors(){
+        return this._instructors;
+    }
+
+    set instructors(val){
+        this._instructors = val;
+    }
 }
 
 export default Meetup;
