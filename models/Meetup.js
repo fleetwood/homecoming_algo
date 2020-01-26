@@ -1,6 +1,5 @@
 class Meetup {
     constructor() {
-
     }
 
     static get Types() {
@@ -12,6 +11,7 @@ class Meetup {
         }
     } 
 
+    // type
     // timeslots
     // instructor
 }
