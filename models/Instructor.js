@@ -1,5 +1,5 @@
 const Meetup = require('./Meetup');
-const PrimaryObject = require('./PrimaryObject').default;
+const PrimaryObject = require('./PrimaryObject');
 
 class Instructor extends PrimaryObject {
     constructor(args) {
@@ -11,12 +11,6 @@ class Instructor extends PrimaryObject {
         return this._name;
     }
     set name(val) {
-        this._name = val;
-    }
-    get rank() {
-        return this._name;
-    }
-    set rank(val) {
         this._name = val;
     }
     get slots() {
