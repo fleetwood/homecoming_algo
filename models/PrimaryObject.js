@@ -1,4 +1,8 @@
 class PrimaryObject {
+    constructor(args) {
+        this._ranking = args._ranking;
+        this._guid = this.generateGuid();
+    }
 
     /**
      * @param {Number} x
@@ -28,6 +32,16 @@ class PrimaryObject {
         ).join(sep);
     };
     
-    // guid
-    // ranking
+    get guid() {
+        return this._guid;
+    }
+
+    get ranking() {
+        return this._ranking;
+    }
+    set ranking(val) {
+        this._ranking = val;
+    }
 }
+
+export default PrimaryObject;
