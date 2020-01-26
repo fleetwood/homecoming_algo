@@ -1,8 +1,14 @@
-class Meetup {
+const PrimaryObject = require('./PrimaryObject');
+
+class Meetup extends PrimaryObject {
     constructor(args) {
-        super()
+        super(args);
         this._timeslots = args.timeslots;
         this._instructor = args.instructor;
+    }
+
+    get timeslots() {
+        return this._timeslots;
     }
 
     static get Types() {
@@ -13,7 +19,6 @@ class Meetup {
             Panel: 'Panel'
         }
     } 
-
 
     // timeslots
     // instructor
