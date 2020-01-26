@@ -1,7 +1,9 @@
 const Meetup = require('./Meetup');
+import PrimaryObject from './PrimaryObject';
 
 export class Instructor extends PrimaryObject {
     constructor(args) {
+        super()
         this._name = args.name;
     }
 
