@@ -4,8 +4,8 @@ class Student extends PrimaryObject {
   constructor(args){
     super(args);
     this._name = args.name;
-    this._meetups = args.meetups;
-    this._preferences = args.preferences;
+    this._meetups = args.meetups || [];
+    this._preferences = args.preferences || [];
   }
     // name
     get name(){

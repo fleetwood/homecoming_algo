@@ -1,6 +1,6 @@
 const PrimaryObject = require('./PrimaryObject');
 
-export class Timeslot extends PrimaryObject{
+class Timeslot extends PrimaryObject{
     constructor(args){
         super(args);
         this._time = args.time;
