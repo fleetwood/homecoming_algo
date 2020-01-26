@@ -1,0 +1,4 @@
+class PrimaryObject {
+    // guid
+    // ranking
+}
