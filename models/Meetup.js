@@ -3,7 +3,6 @@ class Meetup {
         super()
         this._timeslots = args.timeslots;
         this._instructor = args.instructor;
-        this.
     }
 
     static get Types() {
