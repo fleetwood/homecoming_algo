@@ -1,12 +1,17 @@
 export class PrimaryObject {
-  constructor(){
-
+  constructor(args){
+    this._ranking = args.ranking;
+    // this._guid = generateGuid();
   }
 
-  get ranking(){
-    return this.ranking;
+  get guid() {
+    return this._guid;
   }
-  set ranking(rank){
-    this.ranking = rank;
+
+  get ranking() {
+    return this._ranking;
+  }
+  set ranking(val) {
+    this._ranking = val;
   }
 }
