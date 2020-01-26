@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bob's Meetup",
+    "ranking": 1,
+  },
+  {
+    "name": "Tim's Meetup",
+    "ranking": 2,
+  },
+  {
+    "name": "Tina's Meetup",
+    "ranking": 3,
+  },
+]

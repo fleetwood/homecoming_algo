@@ -13,6 +13,10 @@ class Timeslot extends PrimaryObject{
     set time(val){
         this._time = val;
     }
+
+    static get mocks() {
+        return data.map(item => new Timeslot(item));
+    }
 }
 
 module.exports = Timeslot;
