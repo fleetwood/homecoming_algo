@@ -1,3 +1,17 @@
-class Timeslot {
+const PrimaryObject = require('./PrimaryObject');
+
+export class Timeslot extends PrimaryObject{
+    constructor(args){
+        super(args);
+        this._time = args.time;
+    }
     // time
+
+    get time(){
+        return this._time;
+    }
+
+    set time(val){
+        this._time = val;
+    }
 }

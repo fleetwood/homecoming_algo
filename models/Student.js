@@ -1,6 +1,6 @@
 const PrimaryObject = require('./PrimaryObject');
 
-class Student extends PrimaryObject {
+export class Student extends PrimaryObject {
   constructor(args){
     super(args);
     this._name = arg.name;
