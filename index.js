@@ -1,6 +1,10 @@
 const models = require('./models')
-    , Student = models.Student
-    , Meetup = models.Meetup
-    , Instructor = models.Instructor;
+    , utils = require('./utils')
+    , Mapping = utils.Mapping;
 
-console.log(JSON.stringify(Instructor.mocks,null,4));
+const mapping = new Mapping({
+    instructors: models.Instructor.mocks,
+    students: models.Student.mocks
+});
+
+console.log(JSON.stringify(mapping,null,4));

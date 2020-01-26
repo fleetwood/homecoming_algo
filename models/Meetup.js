@@ -1,4 +1,6 @@
-const PrimaryObject = require('./PrimaryObject');
+const PrimaryObject = require('./PrimaryObject')
+, utils = require('./../utils')
+, data = require('./data/meetups.json');
 
 class Meetup extends PrimaryObject {
     constructor(args) {
@@ -31,6 +33,19 @@ class Meetup extends PrimaryObject {
     set instructor(val){
         this._instructor = val;
     }
+
+    get mocks() {
+        return data.map(m => {
+            m.timeslot = require('./Timeslot').mock;
+            m.instructor = require('./Instructor').mock;
+            return new Meetup(m);
+        });
+    }
+    
+    get mock() {
+        return this.mocks.random(1);
+    }
+
 }
 
 module.exports = Meetup;

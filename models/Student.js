@@ -1,4 +1,6 @@
-const PrimaryObject = require('./PrimaryObject');
+const PrimaryObject = require('./PrimaryObject')
+    , utils = require('./../utils')
+    , data = require('./data/students.json');
 
 class Student extends PrimaryObject {
   constructor(args){
@@ -30,6 +32,20 @@ class Student extends PrimaryObject {
 
     set preferences(val){
       this._preferences = val;
+    }
+
+    static get mocks() {
+        return data.map(m => {
+          m.preferences = {
+            timeslots: require('./Timeslot').mocks.random(),
+            instructors: require('./Instructor').mocks.random()
+          };
+          return new Student(m);
+      });
+    }
+
+    static get mock() {
+        return this.mocks.random(1);
     }
 }
 
