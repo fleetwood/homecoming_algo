@@ -11,6 +11,7 @@ class Meetup extends RankedItem {
                 instructor: {}
             }
         });
+        
     }
 
     get timeslot() {
