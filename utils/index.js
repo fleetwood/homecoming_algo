@@ -5,15 +5,12 @@ const isUndefined = (type) => {
 
 if (isUndefined(Array.random)) {
     /**
-     * @param {string} prop Optional. Array.RAND.ONE will select one random item.
-     * Aray.RAND.MULTI will select the number of items specified.
-     * Default to Array.RAND.VARY, which will select a random number of items.
-     * @param {Number} Num Number of items to be selected.
+     * @param {string} prop Optional. If none set, a random number will be selected.
      */
     Object.defineProperty(Array.prototype, 'random', {
         value(prop = 0) {
             let temp = [] // placeholder
-                , source = this; // bc we don't want to modify this
+                , source = JSON.parse(JSON.stringify(this)); // bc we don't want to modify this
             prop = prop > 0 ? prop : random(0, this.length -1); // if prop isn't set get random amount
             do {
                 let i = random(0, source.length -1 );
@@ -23,6 +20,15 @@ if (isUndefined(Array.random)) {
             }
             while(source.length > 0 && prop > 0);
             return temp;
+        }
+    });
+}
+
+if (isUndefined(Array.randomItem)) {
+    Object.defineProperty(Array.prototype, 'randomItem', {
+        value() {
+            // grabs the first item from random array 
+            return this.random(1)[0];
         }
     });
 }
@@ -55,8 +61,13 @@ const generateGuid = (salt = 'XXXXXX-99999-XXXXXX', lower = true) => {
     ).join(sep);
 };
 
+const trace = (item) => {
+    console.log(JSON.stringify(item, null, 2));
+};
+
 module.exports = {
+    isUndefined,
     random,
     generateGuid,
-    Mapping: require('./Mapping')
+    trace
 };

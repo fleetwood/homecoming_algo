@@ -1,11 +1,9 @@
-const PrimaryObject = require('./PrimaryObject')
-    , utils = require('./../utils')
+const RankedItem = require('./RankedItem')
     , data = require('./data/timeslots.json');
 
-class Timeslot extends PrimaryObject{
-    constructor(args){
+class Timeslot extends RankedItem{
+    constructor(...args){
         super(args);
-        this._time = args.time;
     }
 
     get time(){

@@ -1,11 +1,9 @@
-const PrimaryObject = require('./PrimaryObject')
-    , utils = require('./../utils')
+const PrimaryObject = require('./RankedItem')
     , data = require('./data/instructors.json');
 
 class Instructor extends PrimaryObject {
-    constructor(args) {
+    constructor(...args) {
         super(args);
-        this._name = args.name;
     }
 
     get name() {
