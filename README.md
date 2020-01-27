@@ -8,8 +8,8 @@
 
 <hr />
 
-## What Does {...m} do?
 <a name = "extending_object"></a>
+## What Does {...m} do?
 
 You'll see place in code now that looks like this:
 
@@ -78,11 +78,10 @@ Then you get:
 Neat, huh?
 
 [Back to top](#toc)
-
 <hr/>
 
-## What's with *random()* and *randomItem()*?
 <a name = "random"></a>
+## What's with *random()* and *randomItem()*?
 
 These are extension methods added to `utils/index.js`. Generally speaking, this isn't good form, because it's extending a fundamental **JS Prototype object**, `Array`. This can easily make for nightmare code in large scale systems. It's a better idea to make a helper class and add your extension logic there instead.
 
@@ -134,11 +133,10 @@ extendedArray.random();
 Pain in the ass. Just extend the **Prototype** and be mindful of core updates.
 
 [Back to top](#toc)
-
 <hr/>
 
-## Holy changed RankedItem, Batman!
 <a name = "batman"></a>
+## Holy changed RankedItem, Batman!
 
 First of all, `PrimaryObject` was changed to `RankedItem`. The latter is just a more descriptive naming convention for what the class actually does, which is to provide `.ranking` as a property to all child classes.
 
@@ -183,11 +181,10 @@ If there is no setter in this class, then `this.color` (note the lack of undersc
 This is the foundational importance of immutability. Preventing accidents where the intention of code is broken by the implementation of it.
 
 [Back to top](#toc)
-
 <hr />
 
-## What's with *required* in RankedItem ctor()? 
 <a name = "required_ctor"></a>
+## What's with *required* in RankedItem ctor()? 
 
 ```
 super({
@@ -258,5 +255,4 @@ Now lift the X-wing.
 ![Yoda](https://www.outerplaces.com/media/k2/items/cache/6d13258edc0e0de40f320e18fc68fa06_L.jpg)
 
 [Back to top](#toc)
-
 <hr />
