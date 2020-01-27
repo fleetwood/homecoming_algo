@@ -1,14 +1,14 @@
-[
-  {
-    "name": "Bob's Meetup",
-    "ranking": 1,
-  },
-  {
-    "name": "Tim's Meetup",
-    "ranking": 2,
-  },
-  {
-    "name": "Tina's Meetup",
-    "ranking": 3,
-  },
+[ 
+    {
+        "title": "Biking for Beginners",
+        "ranking": 3
+    },
+    {
+        "title": "All the Sweat",
+        "ranking": 1
+    },
+    {
+        "title": "Satu ride",
+        "ranking": 1
+    }
 ]
