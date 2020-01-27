@@ -8,10 +8,34 @@ class Meetup extends RankedItem {
             required: {
                 type: Meetup.TypesArray.randomItem(),
                 timeslot: {},
-                instructor: {}
+                instructor: {},
+                capacity: Number,
             }
         });
-        
+
+        this._attendees = args.attendees || [];
+    }
+
+    get attendees(){
+        return this._attendees;
+    }
+
+    addAttendees(val){
+        if(this._attendees.length - 1 < capacity){
+            this._attendees.push(val);
+        } else {
+            throw "Meetup is at capacity."; 
+        }
+    }
+
+    removeAttendee(index){
+        if(index > -1){
+            this._attendees.splice(index, 1);
+        }
+    }
+
+    removeAllAttendees(){
+       this._attendees.length = 0; 
     }
 
     get timeslot() {
@@ -28,6 +52,14 @@ class Meetup extends RankedItem {
 
     set instructor(val){
         this._instructor = val;
+    }
+
+    get capacity(){
+        return this._capacity;
+    }
+
+    set capacity(val){
+        this._capacity = val;
     }
 
     static get Types() {
@@ -60,6 +92,7 @@ class Meetup extends RankedItem {
                 timeslot: slots.randomItem(),
                 instructor: instructors.randomItem(),
                 type: Meetup.TypesArray.randomItem(),
+                capacity: data.random(5, 10),
                 ...m
             }));
     }
