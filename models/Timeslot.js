@@ -3,7 +3,7 @@ const RankedItem = require('./RankedItem')
 
 class Timeslot extends RankedItem{
     constructor(...args){
-        super(args);
+        super({...args});
     }
     get time(){
         return this._time;
@@ -18,7 +18,7 @@ class Timeslot extends RankedItem{
     }
 
     static get mock() {
-        return this.mocks.random(1);
+        return Timeslot.mocks.random(1);
     }
 }
 

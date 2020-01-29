@@ -1,4 +1,5 @@
 const RankedItem = require('./RankedItem')
+    , ExtendedArray = require('./ExtendedArray')
     , data = require('./data/meetups.json');
 
 class Meetup extends RankedItem {
@@ -9,33 +10,28 @@ class Meetup extends RankedItem {
                 type: Meetup.TypesArray.randomItem(),
                 timeslot: {},
                 instructor: {},
-                capacity: Number,
+                attendees: new ExtendedArray(10, [])
             }
         });
-
-        this._attendees = args.attendees || [];
     }
 
-    get attendees(){
-        return this._attendees;
+    get capacity() {
+        return this._attendees.limit;
     }
 
-    addAttendees(val){
-        if(this._attendees.length - 1 < capacity){
-            this._attendees.push(val);
-        } else {
-            throw "Meetup is at capacity."; 
-        }
+    get attendees() {
+      return this._attendees;
+    }
+    set attendees(val) {
+      this._attendees = val;
+    }
+
+    addAttendee(val){
+        this._attendees.addItem(val);
     }
 
     removeAttendee(index){
-        if(index > -1){
-            this._attendees.splice(index, 1);
-        }
-    }
-
-    removeAllAttendees(){
-       this._attendees.length = 0; 
+        this._attendees.removeItem(val);
     }
 
     get timeslot() {
