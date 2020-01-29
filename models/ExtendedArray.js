@@ -13,11 +13,16 @@ class ExtendedArray extends Array {
     }
 
     addItem(item) {
-        if(this.length < this.limit) {
+        if (this.limit && this.limit >= 0) {
+            // if this.limit is undefined or -1, ignore limits
+            this.push(item); 
+        }
+        else if(this.length < this.limit) {
             // check for duplicates
             this.push(item);
-        } else {
-            throw `Can't add anymore items to array. [${this.length} of ${this.limit}]`;
+        }
+        else {
+            throw `Can't add items to array. [${this.length} of ${this.limit || 'Unknown limit'}]`;
         }
     }
 
