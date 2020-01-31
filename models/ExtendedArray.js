@@ -13,7 +13,7 @@ class ExtendedArray extends Array {
     }
 
     addItem(item) {
-        if (this.limit && this.limit >= 0) {
+        if (this._limit && this._limit >= 0) {
             // if this.limit is undefined or -1, ignore limits
             this.push(item); 
         }

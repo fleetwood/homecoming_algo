@@ -22,16 +22,17 @@ class Student extends RankedItem {
     this._name = val;
   }
 
-  
   get meetups() {
     return this._meetups;
   }
   set meetups(val) {
     this._meetups = val;
   }
+
   addMeetup(val) {
     this._meetups.addItem(val);
   }
+
   removeMeetup(val) {
     this._meetups.removeItem(val);
   }
@@ -39,12 +40,15 @@ class Student extends RankedItem {
   get preferences() {
     return this._preferences;
   }
+
   set preferences(val) {
     this._preferences = val;
   }
+
   addPreference(val) {
     this._preferences.addItem(val);
   }
+  
   removePreference(val) {
     this._preferences.removeItem(val);
   }
