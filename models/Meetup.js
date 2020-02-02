@@ -42,6 +42,11 @@ class Meetup extends RankedItem {
         this._timeslot = val;
     }
 
+    checkInstructor(guid) {
+        return this.instructor.guid === guid;
+        return this.instructor === instructor;
+    }
+
     get instructor(){
         return this._instructor;
     }
