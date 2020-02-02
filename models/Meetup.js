@@ -1,6 +1,7 @@
 const RankedItem = require('./RankedItem')
     , ExtendedArray = require('./ExtendedArray')
-    , data = require('./data/meetups.json');
+    , data = require('./data/meetups.json')
+    , instructors = require('./data/instructors.json');
 
 class Meetup extends RankedItem {
     constructor(...args) {
@@ -15,23 +16,16 @@ class Meetup extends RankedItem {
         });
     }
 
-    get capacity() {
-        return this._attendees.limit;
-    }
-
-    get attendees() {
-      return this._attendees;
-    }
-    set attendees(val) {
-      this._attendees = val;
-    }
-
     addAttendee(val){
-        this._attendees.addItem(val);
+        if(!this._attendees.checkForDuplicates(val.guid)){
+            this._attendees.addItem(val);
+            return true;
+        }
+        return false;
     }
 
     removeAttendee(index){
-        this._attendees.removeItem(val);
+        this._attendees.deleteItem(index);
     }
 
     get timeslot() {
@@ -42,9 +36,10 @@ class Meetup extends RankedItem {
         this._timeslot = val;
     }
 
-    checkInstructor(guid) {
-        return this.instructor.guid === guid;
-        return this.instructor === instructor;
+    checkInstructor() {
+        if(!instructors.guid.find(this.instructor.guid)){
+            return 
+        }
     }
 
     get instructor(){

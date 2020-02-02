@@ -12,13 +12,15 @@ class ExtendedArray extends Array {
       this._limit = val;
     }
 
+    get contents() {
+        return this;
+    }
+
     addItem(item) {
         if (this.limit && this.limit <= 0) {
-            // if this.limit is undefined or -1, ignore limits
             this.push(item); 
         }
         else if(this.limit && this.length < this.limit) {
-            // TODO: check for duplicates
             this.push(item);
         }
         else {
@@ -27,11 +29,12 @@ class ExtendedArray extends Array {
     }
 
     checkForDuplicate(guid) {
-        return this.limit.find(k => k.guid === guid) > 0;
+        return this.find(k => k.guid === guid) > 0;
     }
 
-    deleteItem(item) {
-        // do the logics
+    deleteItem(index) {
+        let removed = this.splice(index, 1);
+        return this;
     }
 }
 
