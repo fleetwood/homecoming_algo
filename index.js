@@ -1,7 +1,5 @@
 const utils = require('./utils')
-    , Scheduler = require('./utils/Scheduler')
-    , Calendar = require('./models/Calendar');
+    , Scheduler = require('./utils/Scheduler');
 
-const scheduler = new Scheduler()
-    , calendar = new Calendar();
-utils.trace(calendar);
+const scheduler = new Scheduler();
+utils.trace(scheduler);
