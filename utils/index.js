@@ -61,6 +61,30 @@ const generateGuid = (salt = 'XXXXXX-99999-XXXXXX', lower = true) => {
     ).join(sep);
 };
 
+/**
+ * 
+ * @param {Array} list The current list to compare to
+ * @param {Array} constraints The properties to check against
+ * @param {Object} item The object being added to the list
+ */
+const checkConstraints = (list, constraints, item) => {
+    let res = false;
+    list.forEach(l => {
+        if (l === item) {
+            res = true;
+            return;
+        }
+        constraints.forEach(c => {
+            console.log(`Checking ${c} : ${l[c] || 'null'} ?== ${item[c] || 'null'}`);
+            if (l[c] && item[c] && l[c] === item[c]) {
+                res = true;
+                return;
+            }
+        });
+    });
+    return res;
+}
+
 const trace = (item) => {
     console.log(JSON.stringify(item, null, 2));
 };
@@ -68,6 +92,7 @@ const trace = (item) => {
 module.exports = {
     isUndefined,
     random,
+    checkConstraints,
     generateGuid,
     trace
 };
