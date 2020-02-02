@@ -27,5 +27,16 @@
 			"}"
 		],
 		"description": "Creates a simple getter/setter."
+	},
+	"Quick console log": {
+		"scope": "javascript, typescript",
+		"prefix": "clog",
+		"body": "console.log($1)",
+		"description": "Quick console log"
+	},
+	"JSON substring": {
+		"scope": "javascript, typescript",
+		"prefix": "jstring",
+		"body": "JSON.stringify($1, null, 4)"
 	}
 }
