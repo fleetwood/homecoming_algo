@@ -37,8 +37,8 @@ class Meetup extends RankedItem {
     }
 
     checkInstructor() {
-        if(!instructors.guid.find(this.instructor.guid)){
-            return 
+        if(!instructors.find(x => x === this.instructor)){
+            return false
         }
     }
 
