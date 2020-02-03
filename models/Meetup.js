@@ -36,18 +36,23 @@ class Meetup extends RankedItem {
         this._timeslot = val;
     }
 
-    checkInstructor() {
-        if(!instructors.find(x => x === this.instructor)){
+    checkInstructor(obj) {
+        if(!instructors.find(x => x === obj)){
             return false
         }
+        return true;
     }
 
     get instructor(){
         return this._instructor;
     }
 
-    set instructor(val){
-        this._instructor = val;
+    set instructor(obj){
+        if(this.checkInstructor(obj)){
+            this.instructor = obj;
+            return true;
+        }
+        return false;
     }
 
     get capacity(){
