@@ -1,8 +1,7 @@
-const Student = require('./models/Student');
+const utils = require('./utils')
+    , Scheduler = require('./utils/Scheduler')
+    , Calendar = require('./models/Calendar');
 
-const me = new Student({
-    ranking: 0,
-    name: 'Fleetwood'
-});
-
-console.log(JSON.stringify(me,null,4));
+const scheduler = new Scheduler()
+    , calendar = new Calendar();
+utils.trace(calendar);

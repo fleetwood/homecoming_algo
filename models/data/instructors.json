@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Bob",
+    "ranking": 3
+  },
+  {
+    "name": "Tim",
+    "ranking": 2
+  },
+  {
+    "name": "Tina",
+    "ranking": 1
+  },
+  {
+    "name": "Leslie",
+    "ranking": 3
+  },
+  {
+    "name": "Chris",
+    "ranking": 2
+  }
+]

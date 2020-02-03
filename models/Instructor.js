@@ -1,10 +1,9 @@
-const Meetup = require('./Meetup');
-const PrimaryObject = require('./PrimaryObject');
+const PrimaryObject = require('./RankedItem')
+    , data = require('./data/instructors.json');
 
 class Instructor extends PrimaryObject {
-    constructor(args) {
+    constructor(...args) {
         super(args);
-        this._name = args.name;
     }
 
     get name() {
@@ -13,13 +12,14 @@ class Instructor extends PrimaryObject {
     set name(val) {
         this._name = val;
     }
-    get slots() {
-        return this._slots;
-    }
-    set slots(val) {
-        this._slots = val;
-    }
     
+    static get mocks() {
+        return data.map(item => new Instructor(item));
+    }
+
+    static get mock() {
+        return this.mocks.random(1);
+    }
 }
 
 module.exports = Instructor;
