@@ -75,7 +75,7 @@ const checkConstraints = (list, constraints, item) => {
             return;
         }
         constraints.forEach(c => {
-            console.log(`Checking ${c} : ${l[c] || 'null'} ?== ${item[c] || 'null'}`);
+            // console.log(`Checking ${c} : ${l[c] || 'null'} ?== ${item[c] || 'null'}`);
             if (l[c] && item[c] && l[c] === item[c]) {
                 res = true;
                 return;
