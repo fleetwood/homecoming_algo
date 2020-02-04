@@ -1,5 +1,5 @@
 const utils = require('./utils')
-    , Scheduler = require('./utils/Scheduler');
+    , models = require('./models');
 
-const scheduler = new Scheduler();
-utils.trace(scheduler);
+const meetup = new models.Meetup();
+utils.trace(meetup);

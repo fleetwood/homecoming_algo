@@ -4,9 +4,9 @@ const RankedItem = require('./RankedItem')
   , data = require('./data/students.json');
 
 class Student extends RankedItem {
-  constructor(...args) {
+  constructor(args) {
     super({
-      ...args,
+      args,
       required: {
         meetups: new ExtendedArray(-1, []),
         preferences: new ExtendedArray(-1, [])

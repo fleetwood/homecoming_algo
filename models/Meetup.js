@@ -4,9 +4,9 @@ const RankedItem = require('./RankedItem')
     , instructors = require('./data/instructors.json');
 
 class Meetup extends RankedItem {
-    constructor(...args) {
+    constructor(args) {
         super({
-            ...args,
+            args,
             required: {
                 type: Meetup.TypesArray.randomItem(),
                 timeslot: {},

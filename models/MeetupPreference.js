@@ -4,8 +4,8 @@ const utils = require('./../utils')
     , Timeslot = require('./Timeslot');
 
 class MeetupPreference extends RankedItem {
-    constructor(...args) {
-        super({...args});
+    constructor(args) {
+        super({args});
     }
 
     get instructor() {
