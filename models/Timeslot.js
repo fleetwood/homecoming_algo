@@ -18,7 +18,7 @@ class Timeslot extends RankedItem{
     }
 
     static get mock() {
-        return this.mocks.random(1);
+        return Timeslot.mocks.random(1);
     }
 }
 

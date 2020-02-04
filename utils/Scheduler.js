@@ -6,7 +6,7 @@ class Scheduler {
         this.instructors = models.Instructor.mocks;
         this.timeslots = models.Timeslot.mocks;
         this.meetups = models.Meetup.mocks(this.timeslots, this.instructors);
-        this.students = models.Student.mocks(this.timeslots, this.instructors);
+        this.students = models.Student.mocks;
     }
 
     get instructors() {

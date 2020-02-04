@@ -1,5 +1,5 @@
 module.exports = {
-    Calendar: require('./Calendar'),
+    ExtendedArray: require('./ExtendedArray'),
     Instructor: require('./Instructor'),
     Meetup: require('./Meetup'),
     Student: require('./Student'),

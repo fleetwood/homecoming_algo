@@ -1,5 +1,7 @@
 const RankedItem = require('./RankedItem')
-    , data = require('./data/meetups.json');
+    , ExtendedArray = require('./ExtendedArray')
+    , data = require('./data/meetups.json')
+    , instructors = require('./data/instructors.json');
 
 class Meetup extends RankedItem {
     constructor(...args) {
@@ -8,9 +10,23 @@ class Meetup extends RankedItem {
             required: {
                 type: Meetup.TypesArray.randomItem(),
                 timeslot: {},
-                instructor: {}
+                instructor: {},
+                attendees: new ExtendedArray(10, [])
             }
         });
+        // super(args);
+    }
+
+    addAttendee(val){
+        if(!this._attendees.checkForDuplicates(val.guid)){
+            this._attendees.addItem(val);
+            return true;
+        }
+        return false;
+    }
+
+    removeAttendee(index){
+        this._attendees.deleteItem(index);
     }
 
     get timeslot() {
@@ -21,12 +37,31 @@ class Meetup extends RankedItem {
         this._timeslot = val;
     }
 
+    checkInstructor(obj) {
+        if(!instructors.find(x => x === obj)){
+            return false
+        }
+        return true;
+    }
+
     get instructor(){
         return this._instructor;
     }
 
-    set instructor(val){
-        this._instructor = val;
+    set instructor(obj){
+        if(this.checkInstructor(obj)){
+            this.instructor = obj;
+            return true;
+        }
+        return false;
+    }
+
+    get capacity(){
+        return this._capacity;
+    }
+
+    set capacity(val){
+        this._capacity = val;
     }
 
     static get Types() {
@@ -59,6 +94,7 @@ class Meetup extends RankedItem {
                 timeslot: slots.randomItem(),
                 instructor: instructors.randomItem(),
                 type: Meetup.TypesArray.randomItem(),
+                capacity: data.random(5, 10),
                 ...m
             }));
     }

@@ -1,7 +1,7 @@
-const PrimaryObject = require('./RankedItem')
+const RankedItem = require('./RankedItem')
     , data = require('./data/instructors.json');
 
-class Instructor extends PrimaryObject {
+class Instructor extends RankedItem {
     constructor(...args) {
         super(args);
     }
@@ -18,7 +18,7 @@ class Instructor extends PrimaryObject {
     }
 
     static get mock() {
-        return this.mocks.random(1);
+        return data.map(item => new Instructor(item)).randomItem();
     }
 }
 

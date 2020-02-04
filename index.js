@@ -1,7 +1,10 @@
 const utils = require('./utils')
-    , Scheduler = require('./utils/Scheduler')
-    , Calendar = require('./models/Calendar');
+    , models = require('./models')
+    , slots = models.Timeslot.mocks
+    , instructors = models.Instructor.mocks;
 
-const scheduler = new Scheduler()
-    , calendar = new Calendar();
-utils.trace(calendar);
+const meetup = new models.Meetup()
+    // slots and instructors are passed to the mock bc
+    // we'll need to make sure there are no duplicates (TBD)
+    , meetups = models.Meetup.mocks(slots, instructors);
+utils.trace(meetups);
