@@ -5,7 +5,7 @@ const utils = require('./../utils')
 
 class MeetupPreference extends RankedItem {
     constructor(args) {
-        super({args});
+        super(args);
     }
 
     get instructor() {

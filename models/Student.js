@@ -4,9 +4,9 @@ const RankedItem = require('./RankedItem')
   , data = require('./data/students.json');
 
 class Student extends RankedItem {
-  constructor(args) {
+  constructor(...args) {
     super({
-      args,
+      ...args,
       required: {
         meetups: new ExtendedArray(-1, []),
         preferences: new ExtendedArray(-1, [])
@@ -48,7 +48,7 @@ class Student extends RankedItem {
   addPreference(val) {
     this._preferences.addItem(val);
   }
-  
+
   removePreference(val) {
     this._preferences.removeItem(val);
   }
@@ -62,9 +62,9 @@ class Student extends RankedItem {
 
   static get mock() {
     return data.map(m => new Student({
-        preferences: MeetupPreference.mocks,
-        ...m
-      }))
+      preferences: MeetupPreference.mocks,
+      ...m
+    }))
       .randomItem();
   }
 }

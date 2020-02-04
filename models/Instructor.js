@@ -2,8 +2,8 @@ const RankedItem = require('./RankedItem')
     , data = require('./data/instructors.json');
 
 class Instructor extends RankedItem {
-    constructor(args) {
-        super({args});
+    constructor(...args) {
+        super(args);
     }
 
     get name() {

@@ -2,8 +2,8 @@ const RankedItem = require('./RankedItem')
     , data = require('./data/timeslots.json');
 
 class Timeslot extends RankedItem{
-    constructor(args){
-        super({args});
+    constructor(...args){
+        super(args);
     }
     get time(){
         return this._time;
