@@ -22,7 +22,7 @@ app.engine('hbs', hbs.express4({
 }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views/');
-app.use(express.static('public/'));
+app.use(express.static('src/'));
 const port = 9777; // "xprs" in T9
 
 app.use((req, res, next) => { res.removeHeader('X-Powered-By'); next(); });
