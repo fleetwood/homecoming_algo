@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
     });
   })
   .get('/users', (req, res) => {
-      const foo = [
+      const users = [
           {
               firstName: "John",
               lastName: "Fleetwood",
@@ -49,7 +49,8 @@ app.get('/', (req, res) => {
         domain: req.get('host'),
         protocol: req.protocol,
         title: 'Users',
-        content: foo,
+        // content: 'gneet!',
+        users: users,
         layout: 'layouts/default' 
       });
   });

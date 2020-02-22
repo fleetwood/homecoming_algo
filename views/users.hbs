@@ -1,2 +1,7 @@
-
 {{> baseContent}}
+    {{#each users}}
+        <div class="row">
+        <b>{{this.firstName}}</b>
+        </div>
+    {{/each}}
+{{baseContent}}

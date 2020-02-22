@@ -5,23 +5,19 @@
 
 <body id="page-top">
 
-  <div id="wrapper">
-    {{> navbar}}
-    <div id="content-wrapper" class="d-flex flex-column">
-
-
-      <div id="content">
-        {{> topnav}}
-        <div class="container-fluid">
-
-          {{{body}}}
+    <div id="wrapper">
+        {{> navbar}}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {{> topnav}}
+                <div class="container-fluid">
+                    {{{body}}}
+                </div>
+            </div>
+            {{> footer}}
         </div>
-      </div>
+        {{> scripts}}
     </div>
-    {{> footer}}
-  </div>
-  {{> scripts}}
-  </div>
 </body>
 
 </html>
