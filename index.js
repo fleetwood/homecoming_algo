@@ -53,6 +53,20 @@ app.get('/', (req, res) => {
         users: users,
         layout: 'layouts/default' 
       });
+      res.render('schedules', {
+        const instructors = [{}];
+        const users = [{}];
+        const timeslots = [{}];
+        const meetups = [{}];
+
+        domain: req.get('host'),
+        protocol: req.protocol,
+        title: 'Schedules',
+        instructors: instructors,
+        users: users,
+        timeslots: timeslots,
+        meetups: meetups,          
+      });
   });
 app.listen(port, listening);
 
