@@ -34,6 +34,25 @@ app.get('/', (req, res) => {
       layout: 'layouts/default'
     });
   })
+  .get('/users', (req, res) => {
+      const foo = [
+          {
+              firstName: "John",
+              lastName: "Fleetwood",
+          },
+          {
+              firstName: "Johnathon",
+              lastName: "Denney",
+          }
+      ];
+      res.render('users', {
+        domain: req.get('host'),
+        protocol: req.protocol,
+        title: 'Users',
+        content: foo,
+        layout: 'layouts/default' 
+      });
+  });
 app.listen(port, listening);
 
 function listening () {
