@@ -1,0 +1,8 @@
+id,date,startTime,endTime,description,locationId,spots,title,classTypeId,sessionTypeId,createdAt,updatedAt,icon
+1,2020-10-11 00:00:00+00,2020-10-11 17:00:00+00,2020-10-11 20:00:00+00,This wonderful full-body workout will get you jumping off your Peloton bike,1,100,Treat Your Body Rights,1,1,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+2,2020-10-13 00:00:00+00,2020-10-13 09:00:00+00,2020-10-13 11:00:00+00,Strike that Warrior pose!,1,39,Yoga Time,3,1,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+3,2020-10-13 00:00:00+00,2020-10-13 14:00:00+00,2020-10-13 16:00:00+00,This wonderful full-body workout will get you jumping off your Peloton bike,2,10,Treat Your Body Rights,1,1,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+4,2020-10-15 00:00:00+00,2020-10-15 17:00:00+00,2020-10-15 20:00:00+00,Experience a moving chat explaining what motivates us to continue to better our minds and bodies,3,2,Why Peloton?,4,2,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+5,2020-10-15 00:00:00+00,2020-10-15 17:00:00+00,2020-10-15 20:00:00+00,Come try on some gear from our favorite vendors,3,2,Buy Peloton!,4,4,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+6,2020-10-15 00:00:00+00,2020-10-15 17:00:00+00,2020-10-15 20:00:00+00,Happy Hour,3,2,Drinks on Us,4,3,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
+7,2020-10-15 00:00:00+00,2020-10-15 19:00:00+00,2020-10-15 22:00:00+00,Make those legs extra swole,4,-5,Leg Day Every Day,2,1,2019-12-18 22:22:46.81+00,2019-12-18 22:22:46.81+00,
