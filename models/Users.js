@@ -13,19 +13,32 @@ const all = () => new Promise((resolve, reject) => {
 });
 
 const byEmail = (emailAddress) => new Promise((resolve, reject) => {
-   return knex.db
-        .select('*')
-        .from('User')
-        .where({email: emailAddress})
-        .then(results => {
-            resolve(results);
-        })
-        .catch(e => {
-            reject(e);
-        });
-});
+    return knex.db
+         .select('*')
+         .from('User')
+         .where({email: emailAddress})
+         .then(results => {
+             resolve(results);
+         })
+         .catch(e => {
+             reject(e);
+         });
+ });
+ const byId = (userId) => new Promise((resolve, reject) => {
+    return knex.db
+         .select('*')
+         .from('User')
+         .where({id: userId})
+         .then(results => {
+             resolve(results);
+         })
+         .catch(e => {
+             reject(e);
+         });
+ });
 
 module.exports = {
     all,
-    byEmail
+    byEmail,
+    byId
 }

@@ -12,6 +12,20 @@ const all = () => new Promise((resolve, reject) => {
         });
 });
 
+const byId = (personId) => new Promise((resolve, reject) => {
+    return knex.db
+        .select('*')
+        .from('Person')
+        .where({ id: personId })
+        .then(results => {
+            resolve(results);
+        })
+        .catch(e => {
+            reject(e);
+        });
+});
+
 module.exports = {
-  all
+    all,
+    byId
 }

@@ -19,6 +19,15 @@ const init = (app) => {
                 res.send({ status: 500, error: e });
             });
     });
+    app.get('/api/user/:userId', (req, res) => {
+        users.byId(req.params.userId)
+            .then(data => {
+                res.send(data);
+            })
+            .catch(e => {
+                res.send({ status: 500, error: e });
+            });
+    });
 }
 
 module.exports = {
