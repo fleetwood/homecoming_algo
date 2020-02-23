@@ -1,9 +1,3 @@
-INSERT INTO public."Admin"
-    (
-    id, email, pid, "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3}, {4});
-
 INSERT INTO public."AttendanceOption"
     (
     id, question, icon, "createdAt", "updatedAt", type)
@@ -15,18 +9,6 @@ INSERT INTO public."ClassTimeSlotPreference"
     id, date, "endTime", "startTime", "isNoPreference", "createdAt", "updatedAt")
 VALUES
     ({0}, {1}, {2}, {3}, {4}, {5}, {6});
-
-INSERT INTO public."ClassTypePreference"
-    (
-    id, type, "maxSelections", "sortIndex", "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3}, {4}, {5});
-
-INSERT INTO public."Configuration"
-    (
-    id, name, value, "isPublic", "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3}, {4}, {5});
 
 INSERT INTO public."InstructorClassType"
     (
@@ -46,12 +28,6 @@ INSERT INTO public."Person"
 VALUES
     ({0}, {1}, {2}, {3}, {4}, {5}, {6});
 
-INSERT INTO public."PersonSession"
-    (
-    "personId", "sessionId", "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3});
-
 INSERT INTO public."Question"
     (
     id, answer, question, "order", "createdAt", "updatedAt")
@@ -70,7 +46,7 @@ INSERT INTO public."SessionTypes"
 VALUES
     ({0}, {1}, {2}, {3});
 
-INSERT INTO public."User"
+INSERT INTO public."Users"
     (
     id, email, "firstName", "lastName", "notificationPreferences", phone, pid, postcode, status, "createdAt", "updatedAt")
 VALUES
@@ -106,8 +82,3 @@ INSERT INTO public."UserInstructorPreference"
 VALUES
    ({0}, {1}, {2}, {3}, {4});
 
-INSERT INTO public."UserSchedule"
-    (
-    "userId", "sessionId", "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3});
