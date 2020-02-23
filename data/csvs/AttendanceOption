@@ -1,0 +1,4 @@
+id,question,icon,createdAt,updatedAt,type
+1,"<b>3.1 Mile Community Run</b><br /> Hudson River Park<br /> Friday, May 1 at 3 PM",outdoor,2020-02-01 00:00:00+00,2020-02-01 00:00:00+00,five_k
+2,<b>Apparel Warehouse Sale</b><br /> Union West<br /> May 1-3,tag,2020-02-01 00:00:00+00,2020-02-01 00:00:00+00,sample_sale
+3,<b>SMS alerts</b><br /> sent to my phone with<br /> Homecoming updates,sms_icon,2020-02-01 00:00:00+00,2020-02-01 00:00:00+00,sms_alerts
