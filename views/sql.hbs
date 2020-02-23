@@ -1,5 +1,10 @@
 {{> baseContent}}
-        <div class="row">
-        <b>{{sql}}</b>
-        </div>
+<ul>
+    {{#each sql}}
+        <li class="row">
+            <h2>{{title}}</h2>
+            <div class="row">{{insert}}</b>
+        </li>
+    {{/each}}
+</ul>
 {{baseContent}}

@@ -27,7 +27,7 @@ const INSERTS = {
         INSERT INTO public."UserInstructorPreference" ("userId", "instructorId", "classType", "createdAt", "updatedAt") VALUES ({0}, "{1}", {2}, {3}, {4});`,
 
 };
-let sql = '';
+let sql = [];
 for (var key in INSERTS) {
     if (INSERTS.hasOwnProperty(key)) {
         try {
@@ -40,8 +40,11 @@ for (var key in INSERTS) {
                     temp = temp.replace(`{${i}}`,j[val]);
                     i++;
                 }
-                sql += temp;
-                console.log(temp);
+                // sql += temp;
+                sql.push({
+                    title: key,
+                    insert: temp
+                });
             });
         }
         catch (e) {
