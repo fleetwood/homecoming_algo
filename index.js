@@ -5,7 +5,8 @@ const config = require('./config')
     , bodyParser = require('body-parser')
     , app = express()
     , hbs = require('express-hbs')
-    , models = require('./models');
+    , models = require('./models')
+    , routes = require('./routes');
 
 app.use(function (req, res, next) {
     req.rawBody = '';
@@ -91,6 +92,8 @@ app.get('/', (req, res) => {
             layout: 'layouts/default'
         });
     });
+
+routes.init(app);
 
 function listening() {
     console.log(`Server available on http://${config.siteUrl}`);
