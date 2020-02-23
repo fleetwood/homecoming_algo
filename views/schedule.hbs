@@ -1,0 +1,24 @@
+{{> baseContent}}
+    <h2>Instructors:</h2>
+    {{#each instructors}}
+        <div class="row">
+        <b>{{this.name}}</b>
+        <b>{{this.activity}}</b>
+        </div>
+    {{/each}}
+    <h2>Users:</h2>
+    {{#each users}}
+        <div class="row">
+        <b>{{this.firstName}} {{this.lastName}}</b>
+        </div>
+    {{/each}}
+    <h2>Meetups:</h2>
+    {{#each meetups}}
+        <div class="row">
+        <b>{{this.instructor}}</b>
+        <b>{{this.activity}}</b>
+        <b>{{this.timeslot}}</b>
+        <b>{{this.capacity}}</b>
+        </div>
+    {{/each}}
+{{baseContent}}
