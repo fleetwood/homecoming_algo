@@ -1,0 +1,122 @@
+[
+  {
+    "id": 11,
+    "answer": "We have negotiated discounted room rates for a limited number of rooms at the EVEN (https://bit.ly/2OFmwhF) and Crowne Plaza hotels (https://bit.ly/39zmobV).",
+    "question": "What hotels do you recommend?",
+    "order": 11,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-12 17:31:44.016+00"
+  },
+  {
+    "id": 1,
+    "answer": "Your Peloton Homecoming event package will give you access to one Studio workout (Cycling, Tread or Yoga), the Community Run, panels featuring Peloton instructors and fellow Members, meet & greets, the Apparel Warehouse Sale, Community Celebration and more.",
+    "question": "What is included in the Peloton Homecoming 2020 package?",
+    "order": 1,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 2,
+    "answer": "Peloton Homecoming will be hosted across multiple venues in New York City, including, Hudson River Park (Community Run), Union West (events & Apparel Warehouse Sale), Terminal 5 (Fireside Chat with John Foley & Jenn Sherman and the Community Celebration), and Peloton Studios New York (all studio workouts). Please stay tuned for more details to come!",
+    "question": "Where will Peloton Homecoming 2020 take place?",
+    "order": 2,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 3,
+    "answer": "The Peloton Homecoming event package is $95.",
+    "question": "How much is a Peloton Homecoming event package?",
+    "order": 3,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 4,
+    "answer": "Each Member may only purchase one Peloton Homecoming event package when logged into their Peloton account. If you do not have a Peloton account, you can create one at https://www.onepeloton.com/register",
+    "question": "How many packages can I purchase at one time?",
+    "order": 4,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 5,
+    "answer": "You will be able to take one studio workout (Cycling, Tread or Yoga) during Homecoming weekend. We also encourage you to participate in the Community Run on Friday, May 1st to kick-off the weekend!",
+    "question": "How many classes will I be able to take?",
+    "order": 5,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 6,
+    "answer": "Upon having completed your event package purchase, you will be prompted to provide your preferred class type, instructors and class time. You will then be placed in a studio class based on your preferences, which will be shared with you when full schedules are released the week of March 9, 2020.",
+    "question": "How will I be assigned my one Studio workout?",
+    "order": 6,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 7,
+    "answer": "You have until February 24, 2020 at 12 PM ET to make updates to your preferences.",
+    "question": "Can I update the preferences I provided for my one Studio workout?",
+    "order": 7,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 8,
+    "answer": "Homecoming schedules will be released to attendees the week of March 9, 2020.",
+    "question": "When will I receive my Homecoming workout?",
+    "order": 8,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 9,
+    "answer": "Programming for Homecoming 2020 will be announced to attendees the week of March 9, 2020.",
+    "question": "When will the full programming schedule be released?",
+    "order": 9,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 10,
+    "answer": "Travel and lodging are not included in the Peloton Homecoming 2020 event package. However, we have negotiated discounted room rates for a limited number of rooms at the EVEN (https://bit.ly/2OFmwhF) and Crowne Plaza (https://bit.ly/39zmobV) hotels.",
+    "question": "Are travel and lodging included?",
+    "order": 10,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 12,
+    "answer": "You will be able to receive a refund up until April 1, 2020 at 12 AM ET.",
+    "question": "What if I purchase an event package and can no longer make it?",
+    "order": 12,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 13,
+    "answer": "No, event packages are non-transferable.",
+    "question": "Can I transfer my event package to another Member?",
+    "order": 13,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 15,
+    "answer": "Please stay tuned for more details to come!",
+    "question": "Can I celebrate at my local showroom?",
+    "order": 15,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-05 12:00:00+00"
+  },
+  {
+    "id": 14,
+    "answer": "We encourage you to join the Official Peloton Homecoming 2020 Group on Facebook to connect with fellow attendees and get updates leading up to and during our biggest Member event of the year. Request to join at https://bit.ly/2SzFGXr",
+    "question": "How can I connect with fellow Homecoming attendees?",
+    "order": 14,
+    "createdAt": "2020-02-05 12:00:00+00",
+    "updatedAt": "2020-02-11 23:20:24.838+00"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "address": "140 W 23rd St, New York, NY 10011",
+    "name": "Peloton Home",
+    "createdAt": "2019-12-18 22:22:46.798+00",
+    "updatedAt": "2019-12-18 22:22:46.798+00"
+  },
+  {
+    "id": 2,
+    "address": "158 Roebling St, Brooklyn, NY 11211",
+    "name": "Peloton Fuzz",
+    "createdAt": "2019-12-18 22:22:46.798+00",
+    "updatedAt": "2019-12-18 22:22:46.798+00"
+  },
+  {
+    "id": 3,
+    "address": "429 11th Ave, New York, NY 10001",
+    "name": "Jacob K. Javitz Center",
+    "createdAt": "2019-12-18 22:22:46.798+00",
+    "updatedAt": "2019-12-18 22:22:46.798+00"
+  },
+  {
+    "id": 4,
+    "address": "4 Pennsylvania Plaza, New York, NY 10001",
+    "name": "Madison Square Garden",
+    "createdAt": "2019-12-18 22:22:46.798+00",
+    "updatedAt": "2019-12-18 22:22:46.798+00"
+  }
+]

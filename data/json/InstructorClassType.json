@@ -1,0 +1,194 @@
+[
+  {
+    "instructorId": 2,
+    "classTypeId": 3,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 1,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 1,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 1,
+    "classTypeId": 3,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 1,
+    "classTypeId": 4,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 4,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 3,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 5,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 6,
+    "classTypeId": 3,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 9,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 8,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 7,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 10,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 11,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 12,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 13,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 14,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 15,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 16,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 17,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 18,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 20,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 19,
+    "classTypeId": 3,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 21,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 22,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 23,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 24,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 25,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 26,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 27,
+    "classTypeId": 3,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 28,
+    "classTypeId": 2,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  },
+  {
+    "instructorId": 29,
+    "classTypeId": 1,
+    "createdAt": "2020-02-02 00:00:00+00",
+    "updatedAt": "2020-02-02 00:00:00+00"
+  }
+]
