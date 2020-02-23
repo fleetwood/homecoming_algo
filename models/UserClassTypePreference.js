@@ -12,6 +12,20 @@ const all = () => new Promise((resolve, reject) => {
         });
 });
 
+const byId = (uctpId) => new Promise((resolve, reject) => {
+    return knex.db
+        .select('*')
+        .from('UserClassTypePreference')
+        .where({ userId: uctpId })
+        .then(results => {
+            resolve(results);
+        })
+        .catch(e => {
+            reject(e);
+        });
+});
+
 module.exports = {
-  all
+    all,
+    byId
 }
