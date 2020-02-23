@@ -11,7 +11,7 @@ const init = (app) => {
             });
     });
     app.get('/api/classtimeslotpreference/:ctspId', (req, res) => {
-        persons.byId(req.params.ctspId)
+        classtimeslotpreferences.byId(req.params.ctspId)
             .then(data => {
                 res.send(data);
             })

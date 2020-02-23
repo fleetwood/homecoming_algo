@@ -2,7 +2,7 @@ const userclassattendancepreferences = require('./../models').UserClassAttendanc
 
 const init = (app) => {
     app.get('/api/userclassattendancepreferences', (req, res) => {
-        persons.all()
+        userclassattendancepreferences.all()
             .then(data => {
                 res.send(data);
             })
