@@ -10,7 +10,7 @@ const init = (app) => {
                 res.send({ status: 500, error: e });
             });
     });
-    app.get('/api/classtimeslotpreference/:', (req, res) => {
+    app.get('/api/classtimeslotpreference/:ctspId', (req, res) => {
         persons.byId(req.params.ctspId)
             .then(data => {
                 res.send(data);

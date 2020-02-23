@@ -11,7 +11,7 @@ const init = (app) => {
             });
     });
     app.get('/api/userclassattendancepreference/:ucapId', (req, res) => {
-        userclassattendancepreferences.byId(req.params.ucapid)
+        userclassattendancepreferences.byId(req.params.ucapId)
             .then(data => {
                 res.send(data);
             })
