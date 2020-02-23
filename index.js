@@ -87,7 +87,7 @@ app.get('/', (req, res) => {
         instructors: instructors,
         users: users,
         meetups: meetups,
-        layout: 'layouts/default'  
+        layout: 'layouts/default'          
       });
   })
 app.listen(port, listening);
