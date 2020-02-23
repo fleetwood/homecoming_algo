@@ -1,40 +1,31 @@
 const INSERTS = {
-    Admin: `
-        INSERT INTO public."Admin" (id, email, pid, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4});`,
     AttendanceOption: `
         INSERT INTO public."AttendanceOption" (id, question, icon, "createdAt", "updatedAt", type) VALUES ({0}, {1}, {2}, {3}, {4}, {5});`,
     ClassTimeSlotPreference: `
-        INSERT INTO public."ClassTimeSlotPreference" (id, date, "endTime", "startTime", "isNoPreference", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?, ?, ?);`,
-    ClassTypePreference: `
-        INSERT INTO public."ClassTypePreference" (id, type, "maxSelections", "sortIndex", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?, ?);`,
-    Configuration: `
-        INSERT INTO public."Configuration" (id, name, value, "isPublic", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?, ?);`,
+        INSERT INTO public."ClassTimeSlotPreference" (id, date, "endTime", "startTime", "isNoPreference", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6});`,
     InstructorClassType: `
-        INSERT INTO public."InstructorClassType" ("instructorId", "classTypeId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+        INSERT INTO public."InstructorClassType" ("instructorId", "classTypeId", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3});`,
     Location: `
-        INSERT INTO public."Location" (id, address, name, "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?);`,
+        INSERT INTO public."Location" (id, address, name, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4})`,
     Person: `
-        INSERT INTO public."Person" (id, bio, "firstName", "lastName", "imageUrl", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?, ?, ?);`,
-    PersonSession: `
-        INSERT INTO public."PersonSession" ("personId", "sessionId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+        INSERT INTO public."Person" (id, bio, "firstName", "lastName", "imageUrl", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})`,
     Question: `
-        INSERT INTO public."Question" (id, answer, question, "order", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?, ?);`,
+        INSERT INTO public."Question" (id, answer, question, "order", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4}, {5});`,
     Session: `
-        INSERT INTO public."Session" (id, date, "startTime", "endTime", description, "locationId", spots, title, "classTypeId", "sessionTypeId", "createdAt", "updatedAt", icon) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
+        INSERT INTO public."Session" (id, date, "startTime", "endTime", description, "locationId", spots, title, "classTypeId", "sessionTypeId", "createdAt", "updatedAt", icon) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12});`,
     SessionTypes: `
-        INSERT INTO public."SessionTypes" (id, type, "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
-    User: `
+        INSERT INTO public."SessionTypes" (id, type, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3});`,
+    Users: `
         INSERT INTO public."User" (id, email, "firstName", "lastName", "notificationPreferences", phone, pid, postcode, status, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10});`,
     UserAttendancePreference: `
-        INSERT INTO public."UserAttendancePreference" ( "userId", "attendanceOptionId", answer, "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?);`,
+        INSERT INTO public."UserAttendancePreference" ( "userId", "attendanceOptionId", answer, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4});`,
     UserClassTimeSlotPreference: `
-        INSERT INTO public."UserClassTimeSlotPreference" ("userId", "classTimeSlotPreference", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+        INSERT INTO public."UserClassTimeSlotPreference" ("userId", "classTimeSlotPreference", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3});`,
     UserClassTypePreference: `
-        INSERT INTO public."UserClassTypePreference" ("userId", "classTypeId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+        INSERT INTO public."UserClassTypePreference" ("userId", "classTypeId", "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3});`,
     UserInstructorPreference: `
-        INSERT INTO public."UserInstructorPreference" ("userId", "instructorId", "classType", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?);`,
-    UserSchedule: `
-        INSERT INTO public."UserSchedule" ("userId", "sessionId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`
+        INSERT INTO public."UserInstructorPreference" ("userId", "instructorId", "classType", "createdAt", "updatedAt") VALUES ({0}, "{1}", {2}, {3}, {4});`,
+
 };
 
 for (var key in INSERTS) {
@@ -47,7 +38,9 @@ for (var key in INSERTS) {
                     , sql = INSERTS[key];
                 for (var val in j) {
                     sql = sql.replace(`{${i}}`,j[val]);
+                    i++;
                 }
+                console.log(sql);
             });
         }
         catch (e) {

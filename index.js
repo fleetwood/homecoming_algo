@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 const hbs = require('express-hbs');
+const inserts = require('./data/index');
 app.use(function (req, res, next) {
     req.rawBody = '';
     req.on('data', (chunk) => req.rawBody += chunk);
@@ -88,6 +89,15 @@ app.get('/', (req, res) => {
         users: users,
         meetups: meetups,
         layout: 'layouts/default'          
+      });
+  })
+  .get('/sql', (req, res) => {
+      res.render('sql', {
+        domain: req.get('host'),
+        protocol: req.protocol,
+        title: 'Sql',
+        layout: 'layouts/default',
+        inserts: inserts,
       });
   })
 app.listen(port, listening);
