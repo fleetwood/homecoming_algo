@@ -16,7 +16,7 @@ module.exports = {
     ClassTimeSlotPreferences,
     Persons,
     Sessions,
-    UserAttenancePreferences,
+    UserAttendancePreferences,
     UserClassTimeSlotPreferences,
     UserClassTypePreferences,
     UserInstructorPreferences,
