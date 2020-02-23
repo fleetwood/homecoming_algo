@@ -27,7 +27,7 @@ const INSERTS = {
         INSERT INTO public."UserInstructorPreference" ("userId", "instructorId", "classType", "createdAt", "updatedAt") VALUES ({0}, "{1}", {2}, {3}, {4});`,
 
 };
-
+let sql = '';
 for (var key in INSERTS) {
     if (INSERTS.hasOwnProperty(key)) {
         try {
@@ -35,16 +35,21 @@ for (var key in INSERTS) {
             console.log(`Building sql for ./json/${key}.json`);
             file.forEach(j => {
                 let i = 0
-                    , sql = INSERTS[key];
+                    , temp = INSERTS[key];
                 for (var val in j) {
-                    sql = sql.replace(`{${i}}`,j[val]);
+                    temp = temp.replace(`{${i}}`,j[val]);
                     i++;
                 }
-                console.log(sql);
+                sql += temp;
+                console.log(temp);
             });
         }
         catch (e) {
             console.log(e);
         }
     }
+}
+
+module.exports = {
+    sql
 }

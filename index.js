@@ -97,7 +97,7 @@ app.get('/', (req, res) => {
         protocol: req.protocol,
         title: 'Sql',
         layout: 'layouts/default',
-        inserts: inserts,
+        sql: inserts.sql,
       });
   })
 app.listen(port, listening);
