@@ -4,7 +4,7 @@ const routes = [
     require('./classtimeslotpreference'),
     require('./classtypepreference'),
     require('./session'),
-    require('./userclassattendancepreference'),
+    require('./userattendancepreference'),
     require('./userclasstimeslotpreference'),
     require('./userinstructorpreference'),
 ];

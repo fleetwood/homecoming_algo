@@ -1,8 +1,8 @@
-const userclassattendancepreferences = require('./../models').UserClassAttendancePreferences;
+const userattendancepreferences = require('./../models').UserAttendancePreferences;
 
 const init = (app) => {
-    app.get('/api/userclassattendancepreferences', (req, res) => {
-        userclassattendancepreferences.all()
+    app.get('/api/userattendancepreferences', (req, res) => {
+        userattendancepreferences.all()
             .then(data => {
                 res.send(data);
             })
@@ -10,8 +10,8 @@ const init = (app) => {
                 res.send({ status: 500, error: e });
             });
     });
-    app.get('/api/userclassattendancepreference/:ucapId', (req, res) => {
-        userclassattendancepreferences.byId(req.params.ucapId)
+    app.get('/api/userattendancepreference/:ucapId', (req, res) => {
+        userattendancepreferences.byId(req.params.ucapId)
             .then(data => {
                 res.send(data);
             })
