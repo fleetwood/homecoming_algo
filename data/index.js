@@ -1,4 +1,4 @@
-const sql = {
+const INSERTS = {
     Admin: `
         INSERT INTO public."Admin" (id, email, pid, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4});`,
     AttendanceOption: `
@@ -24,40 +24,34 @@ const sql = {
     SessionTypes: `
         INSERT INTO public."SessionTypes" (id, type, "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
     User: `
-        INSERT INTO public."User"
-    (
-    id, email, "firstName", "lastName", "notificationPreferences", phone, pid, postcode, status, "createdAt", "updatedAt")
-VALUES
-    ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10});`,
-    UserAttendancePreference:
-        `INSERT INTO public."UserAttendancePreference"
-    (
-    "userId", "attendanceOptionId", answer, "createdAt", "updatedAt")
-VALUES
-    (?, ?, ?, ?, ?);`,
-    UserClassTimeSlotPreference:
-        `INSERT INTO public."UserClassTimeSlotPreference"
-    (
-    "userId", "classTimeSlotPreference", "createdAt", "updatedAt")
-VALUES
-    (?, ?, ?, ?);`,
-    UserClassTypePreference:
-        `INSERT INTO public."UserClassTypePreference"
-    (
-    "userId", "classTypeId", "createdAt", "updatedAt")
-VALUES
-    (?, ?, ?, ?);`,
-    UserInstructorPreference:
-        `INSERT INTO public."UserInstructorPreference"
-    (
-    "userId", "instructorId", "classType", "createdAt", "updatedAt")
-VALUES
-    (?, ?, ?, ?, ?);`,
-    UserSchedule:
-        `INSERT INTO public."UserSchedule"
-    (
-    "userId", "sessionId", "createdAt", "updatedAt")
-VALUES
-    (?, ?, ?, ?);
-}`
+        INSERT INTO public."User" (id, email, "firstName", "lastName", "notificationPreferences", phone, pid, postcode, status, "createdAt", "updatedAt") VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10});`,
+    UserAttendancePreference: `
+        INSERT INTO public."UserAttendancePreference" ( "userId", "attendanceOptionId", answer, "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?);`,
+    UserClassTimeSlotPreference: `
+        INSERT INTO public."UserClassTimeSlotPreference" ("userId", "classTimeSlotPreference", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+    UserClassTypePreference: `
+        INSERT INTO public."UserClassTypePreference" ("userId", "classTypeId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`,
+    UserInstructorPreference: `
+        INSERT INTO public."UserInstructorPreference" ("userId", "instructorId", "classType", "createdAt", "updatedAt") VALUES (?, ?, ?, ?, ?);`,
+    UserSchedule: `
+        INSERT INTO public."UserSchedule" ("userId", "sessionId", "createdAt", "updatedAt") VALUES (?, ?, ?, ?);`
 };
+
+for (var key in INSERTS) {
+    if (INSERTS.hasOwnProperty(key)) {
+        try {
+            let file = require(`./json/${key}.json`);
+            console.log(`Building sql for ./json/${key}.json`);
+            file.forEach(j => {
+                let i = 0
+                    , sql = INSERTS[key];
+                for (var val in j) {
+                    sql = sql.replace(`{${i}}`,j[val]);
+                }
+            });
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+}
