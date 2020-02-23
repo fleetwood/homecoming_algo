@@ -28,30 +28,30 @@ const INSERTS = {
 
 };
 let sql = [];
-for (var key in INSERTS) {
-    if (INSERTS.hasOwnProperty(key)) {
-        try {
-            let file = require(`./json/${key}.json`);
-            console.log(`Building sql for ./json/${key}.json`);
-            file.forEach(j => {
-                let i = 0
-                    , temp = INSERTS[key];
-                for (var val in j) {
-                    temp = temp.replace(`{${i}}`,j[val]);
-                    i++;
-                }
-                // sql += temp;
-                sql.push({
-                    title: key,
-                    insert: temp
-                });
-            });
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
-}
+// for (var key in INSERTS) {
+//     if (INSERTS.hasOwnProperty(key)) {
+//         try {
+//             let file = require(`./json/${key}.json`);
+//             console.log(`Building sql for ./json/${key}.json`);
+//             file.forEach(j => {
+//                 let i = 0
+//                     , temp = INSERTS[key];
+//                 for (var val in j) {
+//                     temp = temp.replace(`{${i}}`,j[val]);
+//                     i++;
+//                 }
+//                 // sql += temp;
+//                 sql.push({
+//                     title: key,
+//                     insert: temp
+//                 });
+//             });
+//         }
+//         catch (e) {
+//             console.log(e);
+//         }
+//     }
+// }
 
 module.exports = {
     sql
