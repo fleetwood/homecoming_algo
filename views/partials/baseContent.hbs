@@ -1,4 +1,9 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">{{title}}</h1>
 </div>
+{{#if errorMessage}}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 style="color: red;">{{errorMessage}}</h2>
+    </div>
+{{/if}}
 {{content}}

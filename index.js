@@ -1,11 +1,11 @@
-require('dotenv').config();
-
-const browserSync = require('browser-sync')
+const config = require('./config')
+    , browserSync = require('browser-sync')
     , express = require('express')
     , cookieParser = require('cookie-parser')
     , bodyParser = require('body-parser')
     , app = express()
-    , hbs = require('express-hbs');
+    , hbs = require('express-hbs')
+    , models = require('./models');
 
 app.use(function (req, res, next) {
     req.rawBody = '';
@@ -34,14 +34,26 @@ app.get('/', (req, res) => {
     });
 })
     .get('/users', (req, res) => {
-        res.render('users', {
-            domain: req.get('host'),
-            protocol: req.protocol,
-            title: 'Users',
-            // content: 'gneet!',
-            users: [],
-            layout: 'layouts/default'
-        });
+        models.Users.byEmail("john.fleetwood@onepeloton.com")
+            .then(results => {
+                res.render('users', {
+                    domain: req.get('host'),
+                    protocol: req.protocol,
+                    title: 'Users',
+                    users: results,
+                    layout: 'layouts/default'
+                });  
+            })
+            .catch(e => {
+                res.render('users', {
+                    domain: req.get('host'),
+                    protocol: req.protocol,
+                    title: 'Users',
+                    errorMessage: e.message,
+                    users: [],
+                    layout: 'layouts/default'
+                });  
+            })
     })
     .get('/schedule', (req, res) => {
         const instructors = [
@@ -80,19 +92,15 @@ app.get('/', (req, res) => {
         });
     });
 
-const host = process.env.HOST
-    , port = process.env.PORT // "xprs" in T9
-    , site = `${host}:${port}`;
-
 function listening() {
-    console.log(`Server available on http://${site}`);
+    console.log(`Server available on http://${config.siteUrl}`);
     browserSync({
         files: ['public/**/*.{html,js,css}', 'views/**/*.{html,hbs}'],
         online: false,
         open: false,
-        port: Number(port) + 1,
-        proxy: site,
+        port: Number(config.port) + 1,
+        proxy: config.siteUrl,
         ui: false
     });
 }
-app.listen(port, listening);
+app.listen(config.port, listening);
