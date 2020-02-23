@@ -86,7 +86,8 @@ app.get('/', (req, res) => {
         title: 'Schedule',
         instructors: instructors,
         users: users,
-        meetups: meetups,          
+        meetups: meetups,
+        layout: 'layouts/default'          
       });
   })
 app.listen(port, listening);
